@@ -1,0 +1,19 @@
+h1{
+    color: blue;
+}
+p{
+    color: #bc8f8f;
+    font-size: 30px;
+    font-family: "Times New Roman";
+    font-weight: 100;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: none;
+    font-style: italic;
+    line-height: 1.2;
+    background-color: #adfffa;
+
+}
+a{
+    text-decoration: none;
+}
