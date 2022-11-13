@@ -1,0 +1,26 @@
+body{
+    margin: 40px;
+    font-family: "Times New Roman";
+}
+div{
+    border-bottom-style: dashed;
+    border-bottom-color: #8d1511;
+}
+ol{
+    width: 500px;
+    float: right;
+    list-style: none;
+    text-align: right;
+    font-size: 20px;
+}
+h2 {
+    color: #8d1511;
+    text-decoration: underline;
+    font-style: italic;
+}
+p{
+    font-size: 20px;
+}
+ul{
+    font-size: 20px;
+}

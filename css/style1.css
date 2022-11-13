@@ -12,6 +12,9 @@ p{
     font-style: italic;
     line-height: 1.2;
     background-color: #adfffa;
+    width: 400px;
+    float: left;
+    margin: 15px;
 
 }
 a{
