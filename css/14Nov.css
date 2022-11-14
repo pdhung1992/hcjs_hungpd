@@ -1,0 +1,60 @@
+img{
+    max-width: 100%;
+}
+div{
+    width: calc(25% - 30px);
+    float: left;
+    margin: 15px;
+    /*margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+     */
+    /*margin: 5px 10px 15px 20px; */
+    padding: 10px;
+    /*padding-top:
+    padding-right;
+    padding-bottom;
+    padding-left;
+     */
+    /*background: cadetblue;*/
+
+    box-sizing: border-box;
+
+    /*border: 5px solid red;*/
+
+    border-radius: 6px;
+
+    box-shadow: 0px 0px 10px greenyellow;
+
+    /*transform: rotate(20deg); scale(0.8)*/
+
+    transition: all 500ms;
+
+}
+div:hover{
+    transform: rotate(20deg);
+    background-color: #FFA500;
+}
+#s1{
+    background-color: antiquewhite;
+}
+.s2{
+    background-color: burlywood;
+}
+
+.s2.s3{
+    background-color: blueviolet;
+}
+.s3 h2{
+    text-transform: uppercase;
+}
+.box-1 .ph{
+    color: green;
+}
+.ph{
+    color: blueviolet;
+}
+/*
+tag -> parent tag -> class -> parent class -> ID -> parent ID
+ */
