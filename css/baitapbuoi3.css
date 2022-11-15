@@ -1,14 +1,23 @@
 div{
-    width: calc(33.3% - 40px);
+    width: calc(33.3% - 30px);
     float: left;
     margin: 15px;
     box-sizing: border-box;
-    padding: 20px 20px 20px 20px;
+    padding: 30px 30px;
     background-color: #deb887;
     text-align: center;
     align-content: center;
     border-radius: 15px;
 }
 div:hover{
-    background-color: #da4112;
+    background-color: #d25937;
+    font-weight: 700;
+}
+img{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
