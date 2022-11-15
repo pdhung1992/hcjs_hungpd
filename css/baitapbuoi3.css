@@ -1,0 +1,14 @@
+div{
+    width: calc(33.3% - 40px);
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
+    background-color: #deb887;
+    text-align: center;
+    align-content: center;
+    border-radius: 15px;
+}
+div:hover{
+    background-color: #da4112;
+}
