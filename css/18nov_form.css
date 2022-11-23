@@ -1,0 +1,9 @@
+input[name=fullname]{
+    background-color: beige;
+}
+input[type=email]{
+    background-color: orange;
+}
+input[name=password][type=password]{
+    background-color: #d25937;
+}

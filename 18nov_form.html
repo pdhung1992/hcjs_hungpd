@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/18nov_form.css">
+</head>
+<body>
+  <form method="get" action="#">
+      <input name="fullname" type="text" placeholder="Full name" required/>
+      <br>
+      <input name="email" type="email" placeholder="Email" required/>
+      <br>
+      <input name="password" type="password" placeholder="Password" required/>
+      <br>
+      <input name="age" type="number" placeholder="Age"/>
+      <br>
+      <input name="birthday" type="date" placeholder="Date of birth"/>
+      <br>
+      <input name="time" type="time" placeholder="Time">
+      <br>
+      <input name="week" type="week" placeholder="Week">
+      <br>
+      <input name="tel" type="tel" placeholder="Tel number">
+      <br>
+      <label><input name="gender" type="radio" value="male"/>Nam</label>
+      <label><input name="gender" type="radio" value="female"/>Nữ</label>
+      <label><input name="gender" type="radio" value="other"/>Khác</label>
+      <br>
+      <label><input name="multi" type="checkbox" value="m1"/>Đáp án A</label>
+      <label><input name="multi" type="checkbox" value="m2"/>Đáp án B</label>
+      <label><input name="multi" type="checkbox" value="m3"/>Đáp án C</label>
+      <label><input name="multi" type="checkbox" value="m4"/>Đáp án D</label>
+      <br>
+      <textarea name="description" rows="5" cols="50" placeholder="Tiểu sử bản thân"></textarea>
+      <br>
+      <select name="country" >
+          <option value="Việt Nam">Việt Nam</option>
+          <option value="Laos">Laos</option>
+          <option value="Cambodia">Cambodia</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Singapore">Singapore</option>
+      </select>
+      <br>
+      <button type="reset">Reset</button>
+      <button type="submit">Submit</button>
+      <button type="button">Button</button>
+  </form>
+</body>
+</html>
