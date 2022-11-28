@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28Nov JavaScript</title>
+</head>
+<body>
+<!--  <h1 id="x-name">Tên người</h1>-->
+    <ul id="thucdon">
+
+    </ul>
+  <script type="text/javascript">
+    // var obj1 = { //dấu { } dùng để mô tả đối tượng
+    //   name: "Nguyễn Văn A",
+    //   age: 18,
+    //   address: "Hà Nội",
+    //   gender: "Nam"
+    // }
+    // console.log(obj1.name);
+    // var xh1 = document.getElementById("x-name");
+    // setTimeout(function () {
+    //     //xh1.innerText = "Nguyễn văn B";  // thay đổi nội dung
+    //     xh1.innerHTML = obj1.name; //thay đổi cấu trúc HTML
+    //     xh1.style.color = "blue"; //thay đổi style
+    //     xh1.style.backgroundColor = "orange"; // thay đổi các style có dấy gạch ở giữa (background-color), bỏ dấu gạch ngang, viết hoa chữ cái đầu tiên sau dấu gạch
+    //
+    // }, 3000);
+
+    var menu = [
+        "Phở bò",
+        "Bún real",
+        "Xôi xéo",
+        "Bánh mỳ",
+        "Trứng vịt lộn"
+    ]
+    var td = document.getElementById("thucdon");
+    for(var i=0; i<menu.length; i++){
+        var pt = `<li>${menu[i]}</li>`; //chèn phần tử thứ i của mảng vào
+        td.innerHTML += pt;
+    }
+  </script>
+
+</body>
+</html>

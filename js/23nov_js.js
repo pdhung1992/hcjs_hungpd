@@ -29,7 +29,7 @@ for (var j=0; j<10; j++){
 }
 
 console.log("gia tri cua y= "+y+", gia tri dep");
-//in chuoi kem gia tri cua bien vao, su sung cap dau ` `
+//in chuoi kem gia tri cua bien vao, su dung cap dau ` `
 console.log(`gia tri cua y= ${y}, gia tri dep`);
 
 //function
@@ -119,4 +119,4 @@ var span_sec = document.getElementById("seconds");
     if(min < 0){
         clearInterval(timer);
     }
-}, 10);
+}, 1000);
