@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28Nov Event</title>
+</head>
+<body>
+
+<!--  onclick: sự kiện xảy ra khi click chuột-->
+<!--  onmouseenter: sự kiện xảy ra khi con trỏ chuột di chuyển vào trong khối (bắt đầu từ border-->
+<!--  onmouseleave: sự kiện xảy ra khi con trỏ chuột di chuyển ra ngoài khối-->
+  <button onclick="userClick()"
+          onmouseenter="userMouseIn()"
+          onmouseleave="userMouseOut()">
+    Click me!
+  </button>
+
+<!--onkeydown: sụ kiện xảy ra khi nhấn phím xuống
+    onkeyup: xảy ra khi thả phím nảy lên
+    => keydown lấy giá trị trước khi nhấn nút, keyup lấy giá trị sau khi nhấn nút-->
+  <input onkeydown="keyDown()"
+         onkeyup="keyUp()"
+          id="ips" type="text" placeholder="Search" name="search" />
+
+<!--  onchange: xảy ra khi giá trị có sự thay đổi-->
+  <select name="city" id="sl" onchange="change()">
+    <option value="hn">Hanoi</option>
+    <option value="sg">Saigon</option>
+    <option value="dn">Danang</option>
+  </select>
+
+  <span id="city">hn</span>
+  <script type="text/javascript">
+    var ips = document.getElementById("ips");
+    var sl = document.getElementById("sl");
+    var ct = document.getElementById("city")
+    function userClick() {
+      console.log("Nhấn vào Link bên dưới để tải game!");
+    }
+    function userMouseIn() {
+      console.log("Mouse in...")
+    }
+    function userMouseOut() {
+      console.log("Mouse out..")
+    }
+    function keyDown() {
+      console.log("Key down..."+ ips.value);
+    }
+    function keyUp() {
+      console.log("Key up..." + ips.value);
+
+    }
+    function change() {
+      //console.log("change..."+sl.value);
+      ct.innerText = sl.value;
+    }
+
+  </script>
+</body>
+</html>

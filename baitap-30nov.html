@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập</title>
+<!--    <link rel="stylesheet" href="css/30nov.css">-->
+    <style>
+        body{
+            background-image: url("https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            background-size: 100%;
+        }
+
+        #boxes > div{
+            background-image: linear-gradient(0, rgba(87, 89, 89, 0.5), rgba(87, 89, 89, 0.5));
+            width: calc(21% - 10px);
+            height: 150px;
+            border-radius: 15px;
+            margin: 2%;
+            padding: 5px;
+            float: left;
+        }
+        .date{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: unset;
+        }
+        .content{
+            height: 120px;
+            display: flex;
+        }
+        .desc{
+            width: 50%;
+            align-items: center;
+        }
+        .icon{
+            width: 50%;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div id="boxes">
+
+</div>
+<script type="text/javascript">
+    // step 1: get data from web api
+    var xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+
+        // step 2
+        var result = this.responseText;
+        var data = JSON.parse(result)
+        // end of step 2
+        // >> step 1 và 2 không đổi
+
+        //step 3: using data
+
+        var data1 = data.list;
+        for( var i=0; i<data1.length; i++){
+            var date = data1[i].dt_txt;
+            var temp = data1[i].main.temp;
+            var desc = data1[i].weather[0].description;
+            var icon = data1[i].weather[0].icon;
+            console.log(icon);
+            document.getElementById("boxes").innerHTML +=`<div>
+                <h3 class="date">${date}</h3>
+                <div class="content">
+                    <div class="desc">
+                        <h1>${temp}<sup>o</sup>C</h1>
+                        <p>${desc}</p>
+                    </div>
+                    <div class="icon">
+                        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="icon">
+                    </div>
+                </div>
+</div>`
+        }
+    }
+    xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vietnam&appid=09a71427c59d38d6a34f89b47d75975c&units=metric");
+    xhttp.send();
+</script>
+
+</body>
+</html>
