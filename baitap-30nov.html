@@ -10,7 +10,7 @@
             background-size: 100%;
         }
 
-        #boxes > div{
+        .box{
             background-image: linear-gradient(0, rgba(87, 89, 89, 0.5), rgba(87, 89, 89, 0.5));
             width: calc(21% - 10px);
             height: 150px;
@@ -63,7 +63,7 @@
             var desc = data1[i].weather[0].description;
             var icon = data1[i].weather[0].icon;
             console.log(icon);
-            document.getElementById("boxes").innerHTML +=`<div>
+            document.getElementById("boxes").innerHTML +=`<div class="box">
                 <h3 class="date">${date}</h3>
                 <div class="content">
                     <div class="desc">
