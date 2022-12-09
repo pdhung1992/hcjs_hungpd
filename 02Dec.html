@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O2 Dec</title>
+    <link rel="stylesheet" href="css/16nov_layout.css">
+  <style>
+    .container{
+      border: solid #ffffff 2px;
+      border-radius: 15px;
+        padding: 15px;
+    }
+  </style>
+</head>
+<body>
+<section class="section main">
+  <div class="container">
+
+<!--    Chọn tên thành phố-->
+
+<!--    <select name="city" id="select-city" onchange="curentWeather()">-->
+<!--      <option value="hanoi">Hà Nội</option>-->
+<!--      <option value="saigon">Thành phố Hồ Chí Minh</option>-->
+<!--      <option value="london">London</option>-->
+<!--      <option value="beijing">Bắc Kinh</option>-->
+<!--    </select>-->
+
+<!--    nhập vào tên thành phố-->
+
+    <input type="text" name="city" value="hanoi" placeholder="Nhập tên thành phố" id="input-city"> <!-- them gia tri mac dinh nang value="" -->
+    <button type="button" onclick="curentWeather()">Submit</button>
+
+    <h1 >Thành phố: <span id="cityName">Thành phố</span></h1>
+    <h2>Nhiệt độ: <span id="nd">Nhiệt độ</span><sup>o</sup>C</h2>
+    <h3>Độ ẩm: <span id="am">Độ ẩm</span>%</h3>
+    <h3>Áp suất: <span id="as">Áp suất</span> Pa</h3>
+    <p id="mota">Mô tả</p>
+    <p><img src="#" id="icon"></p>
+  </div>
+  <script type="text/javascript">
+    function curentWeather(){
+      // step 1: get data from web api
+      var xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+
+        // step 2
+        var result = this.responseText;
+        var data = JSON.parse(result)
+        // end of step 2
+        // >> step 1 và 2 không đổi
+
+        //step 3: using data
+
+        //thanh pho
+        var city = data.name;
+        //console.log(city);
+        var cityname = document.getElementById("cityName");
+        cityname.innerText = city;
+
+        //nhiet do
+        var temp = data.main.temp;
+        //console.log(temp);
+        var nd = document.getElementById("nd");
+        nd.innerText = temp;
+
+        //do am
+        var doam = data.main.humidity;
+        var am = document.getElementById("am");
+        am.innerText = doam;
+
+        //ap suat
+        var apsuat = data.main.pressure;
+        var as = document.getElementById("as");
+        as.innerText = apsuat;
+
+        //nhieu may
+        var may = data.weather; //tra ve array
+        var mota = "";
+        for (var i = 0; i < may.length; i++) {
+          mota += may[i].description;
+        }
+        // var mt = document.getElementById("mota");
+        // mt.innerText = mota;
+        document.getElementById("mota").innerText = mota;
+
+        //icon
+        var may = data.weather; //tra ve array
+        var ic = "";
+        for (var i = 0; i < may.length; i++) {
+          ic += may[i].icon;
+        }
+        var src = `https://openweathermap.org/img/wn/${ic}@2x.png`;
+        document.getElementById("icon").src = src;
+      }
+      // var sl_city = document.getElementById("select-city");
+      var sl_city = document.getElementById("input-city");
+      var ct = sl_city.value;
+      xhttp.open("GET", `https://api.openweathermap.org/data/2.5/weather?q=${ct}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`);
+      xhttp.send();
+    }
+    curentWeather();
+  </script>
+</section>
+</body>
+</html>

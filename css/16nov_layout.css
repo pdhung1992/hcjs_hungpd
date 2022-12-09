@@ -10,9 +10,13 @@ body{
     font-size: 15px;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
-    background-color: #f5f5dc;
+    background-color: #2ddede;
     font-weight: 400;
     text-align: left;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-right: 10%;
+    text-align: center;
 }
 a{
     text-decoration: none;
