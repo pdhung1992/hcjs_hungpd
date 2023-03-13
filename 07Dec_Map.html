@@ -9,25 +9,30 @@
 <body>
     <section>
         <div class="container">
-            <div id="map" style="height: 400px"></div>
+            <div id="map" style="height: 600px"></div>
             <script type="text/javascript">
 <!--                lay vi tri hien tai-->
-                var lat = 0;
-                var long = 0;
+                var lat = 21.0506866;
+                var long = 105.8047464;
+                var marker;
 
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    lat = position.coords.latitude;
-                    long = position.coords.longitude;
-                    // console.log(lat);
-                    // console.log(long);
-                    initMap();
-                })
+                // navigator.geolocation.getCurrentPosition(function (position) {
+                //     lat = position.coords.latitude;
+                //     long = position.coords.longitude;
+                //     // console.log(lat);
+                //     // console.log(long);
+                //     initMap();
+                // })
 
                 let map;
                 function initMap() {
                     map = new google.maps.Map(document.getElementById("map"), {
                         center: { lat: lat , lng: long },
                         zoom: 16,
+                    });
+                    marker = new google.maps.Marker({
+                        position: {lat: lat, lng: long},
+                        map: map,
                     });
                 }
                 window.initMap = initMap;
